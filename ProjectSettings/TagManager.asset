@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Ground
+  - Obe
+  - NPC
+  - Mirror
+  - Bullet
+  - Key
+  - Lever
+  - Reset
+  - CheckPoint
+  - Obe2
+  - CheckPoint_1
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - UseAble
+  - NPC
+  - UnderPlayer
+  - Key
+  - Confiner
+  - Portal
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1191771503
+    locked: 0
+  - name: Background
+    uniqueID: 1508041173
+    locked: 0
+  - name: Pipe
+    uniqueID: 3246222429
+    locked: 0
+  - name: Platform
+    uniqueID: 2028027263
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3922290403
+    locked: 0
+  - name: Player
+    uniqueID: 3130953565
+    locked: 0
+  - name: Attack
+    uniqueID: 3005746421
+    locked: 0
