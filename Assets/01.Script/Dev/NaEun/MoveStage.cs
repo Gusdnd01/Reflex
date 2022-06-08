@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lever : MonoBehaviour, IInteract
+public class MoveStage : MonoBehaviour, IInteract
 {
     [SerializeField]
     private Animator anim;
