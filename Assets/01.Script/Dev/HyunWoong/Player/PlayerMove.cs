@@ -289,7 +289,6 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator SetCam()
     {
-        CameraManager.instance._cmPlayerCam.m_Lens.OrthographicSize = 5;
         yield return new WaitForSeconds(5f);
         CameraManager.instance.SetPlayerCamActive();
 
