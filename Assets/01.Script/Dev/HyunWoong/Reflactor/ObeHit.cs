@@ -33,7 +33,7 @@ public class ObeHit : HitAbleObject
     private void OnDestroy()
     {
         if (action == null) return;
-
+        CameraManager.instance.SetPlayerCamActive();
         action();
     }
 

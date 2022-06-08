@@ -864,7 +864,7 @@ GameObject:
   - component: {fileID: 1050589745}
   - component: {fileID: 1050589744}
   m_Layer: 5
-  m_Name: Fade
+  m_Name: FadePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1669,10 +1669,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1853054640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31bf908c05ccf074db5d450c22fc1a7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9274c223f9ed1dc4d94e63108aa86c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 1050589744}
+  fadePanelTrm: {fileID: 1050589746}
 --- !u!4 &1853054642
 Transform:
   m_ObjectHideFlags: 0

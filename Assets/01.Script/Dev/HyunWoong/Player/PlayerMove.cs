@@ -235,12 +235,15 @@ public class PlayerMove : MonoBehaviour
                 if (hit.transform.CompareTag("Obe"))
                 {
                     hit.transform.GetComponent<ObeHit>().Set(orbSpawner.SpawnOrb);
-                    StartCoroutine(SetCam());
+                    CameraManager.instance._cmObeCam.Follow = hit.transform;
+                    CameraManager.instance.SetObeCam();
+
                 }
                 if (hit.transform.CompareTag("Obe2"))
                 {
                     hit.transform.GetComponent<ObeHit>().Set(orbSpawner2.SpawnOrb);
-                    StartCoroutine(SetCam());
+                    CameraManager.instance._cmObeCam.Follow = hit.transform;
+                    CameraManager.instance.SetObeCam();
                 }
             }
         }
@@ -285,13 +288,6 @@ public class PlayerMove : MonoBehaviour
     IEnumerator MovingSpeed()
     {
         yield return new WaitForSeconds(1f);
-    }
-
-    IEnumerator SetCam()
-    {
-        yield return new WaitForSeconds(5f);
-        CameraManager.instance.SetPlayerCamActive();
-
     }
 
     IEnumerator AttackSlash()

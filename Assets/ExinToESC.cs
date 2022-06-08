@@ -9,6 +9,11 @@ public class ExinToESC : MonoBehaviour
     [SerializeField]
     Image image;
 
+    private void Start()
+    {
+        FadeManager.Instance.FadeOut();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
