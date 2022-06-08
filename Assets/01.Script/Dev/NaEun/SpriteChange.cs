@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpriteChange : MonoBehaviour
 {
+    private float changeDelay = 0.2f;
     public Sprite activeSprite, defaultSprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] GameObject hit;
@@ -27,7 +28,7 @@ public class SpriteChange : MonoBehaviour
     }
     IEnumerator Back()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(changeDelay);
         spriteRenderer.sprite = defaultSprite;
     }
 }

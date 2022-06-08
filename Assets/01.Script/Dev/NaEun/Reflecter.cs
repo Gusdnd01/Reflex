@@ -20,11 +20,6 @@ public class Reflecter : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
-    {
-        lastVelocity = rigid.velocity;
-    }
-
     private void OnCollisionEnter2D(Collision2D collision) 
     {
         print("aa");
