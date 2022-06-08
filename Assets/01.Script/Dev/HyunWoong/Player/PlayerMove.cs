@@ -76,6 +76,8 @@ public class PlayerMove : MonoBehaviour
         player = transform.GetComponentInParent<Transform>();
         cam = GameManager.instance.cam;
         isJumping = false;
+
+        FadeManager.Instance.FadeOut();
     }
 
     void Update()
@@ -328,7 +330,7 @@ public class PlayerMove : MonoBehaviour
     }
     public void PlayFootStep()
     {
-        if (isJumping) return;
+        if (!isJumping) return;
         AudioPool.instance.Play(walkClips[UnityEngine.Random.Range(0, walkClips.Length)], 0.5f, 2f);
     }
     private void OnCollisionEnter2D(Collision2D collision)
