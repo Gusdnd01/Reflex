@@ -18,7 +18,8 @@ public class NPC : MonoBehaviour, IInteract
     PlayerMove playerMove;
     public DialogFollow TextDisplayManager { get { return textDisplayManager; } }
 
-    void Awake() => playerMove = FindObjectOfType<PlayerMove>();//transform.Find("player_0").GetComponent<PlayerMove>();
+    void Awake() => playerMove = FindObjectOfType<PlayerMove>();
+    //transform.Find("player_0").GetComponent<PlayerMove>();
     
     public void InteractionObject()
     {
