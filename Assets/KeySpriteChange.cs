@@ -21,13 +21,12 @@ public class KeySpriteChange : MonoBehaviour
     {
         anim.SetTrigger("Open");
 
-        CameraManager.instance.SetOpenCam();
-
         StartCoroutine(Open());
     }
 
     IEnumerator Open()
     {
+        CameraManager.instance.SetOpenCam();
         yield return new WaitForSeconds(2f);
         wayAnimation.SetTrigger("DoorOpen");
         wayAnimation_1.SetTrigger("DoorOpen");

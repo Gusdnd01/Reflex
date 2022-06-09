@@ -13,6 +13,8 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera _cmOpenCam;
     public CinemachineVirtualCamera _cmPlayCam;
 
+    public CinemachineVirtualCamera _cmObeCam;
+
     private CinemachineVirtualCamera _activeCam = null;
     private CinemachineBasicMultiChannelPerlin _activePerlin = null;
 
@@ -73,6 +75,7 @@ public class CameraManager : MonoBehaviour
         _cmNpcCam.Priority = backPriority;
         _cmOpenCam.Priority = backPriority;
         _cmPlayCam.Priority = backPriority;
+        _cmObeCam.Priority = backPriority;
 
         _cmPlayerCam.m_Lens.OrthographicSize = Mathf.Lerp(5f, 3.5f, 1f);
 
@@ -86,6 +89,7 @@ public class CameraManager : MonoBehaviour
         _cmNpcCam.Priority = backPriority;
         _cmDoorOpenCam.Priority = frontPriority;
         _cmOpenCam.Priority = backPriority;
+        _cmObeCam.Priority = backPriority;
 
         _activeCam = _cmDoorOpenCam;
         _activePerlin = _actionPerlin;
@@ -97,6 +101,7 @@ public class CameraManager : MonoBehaviour
         _cmNpcCam.Priority = backPriority;
         _cmDoorOpenCam.Priority = backPriority;
         _cmOpenCam.Priority = frontPriority;
+        _cmObeCam.Priority = backPriority;
 
         _activeCam = _cmOpenCam;
         _activePerlin = null;
@@ -110,8 +115,22 @@ public class CameraManager : MonoBehaviour
         _cmDoorOpenCam.Priority = backPriority;
         _cmOpenCam.Priority = backPriority;
         _cmPlayCam.Priority = frontPriority;
+        _cmObeCam.Priority = backPriority;
 
         _activeCam = _cmPlayCam;
+        _activePerlin = null;
+    }
+
+    public void SetObeCam()
+    {
+        _cmPlayerCam.Priority = backPriority;
+        _cmNpcCam.Priority = backPriority;
+        _cmDoorOpenCam.Priority = backPriority;
+        _cmOpenCam.Priority = backPriority;
+        _cmPlayCam.Priority = backPriority;
+        _cmObeCam.Priority = frontPriority;
+
+        _activeCam = _cmObeCam;
         _activePerlin = null;
     }
 }

@@ -76,6 +76,8 @@ public class PlayerMove : MonoBehaviour
         player = transform.GetComponentInParent<Transform>();
         cam = GameManager.instance.cam;
         isJumping = false;
+
+        FadeManager.Instance.FadeOut();
     }
 
     void Update()
@@ -233,12 +235,15 @@ public class PlayerMove : MonoBehaviour
                 if (hit.transform.CompareTag("Obe"))
                 {
                     hit.transform.GetComponent<ObeHit>().Set(orbSpawner.SpawnOrb);
-                    StartCoroutine(SetCam());
+                    CameraManager.instance._cmObeCam.Follow = hit.transform;
+                    CameraManager.instance.SetObeCam();
+
                 }
                 if (hit.transform.CompareTag("Obe2"))
                 {
                     hit.transform.GetComponent<ObeHit>().Set(orbSpawner2.SpawnOrb);
-                    StartCoroutine(SetCam());
+                    CameraManager.instance._cmObeCam.Follow = hit.transform;
+                    CameraManager.instance.SetObeCam();
                 }
             }
         }
@@ -285,14 +290,6 @@ public class PlayerMove : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
-    IEnumerator SetCam()
-    {
-        CameraManager.instance._cmPlayerCam.m_Lens.OrthographicSize = 5;
-        yield return new WaitForSeconds(5f);
-        CameraManager.instance.SetPlayerCamActive();
-
-    }
-
     IEnumerator AttackSlash()
     {
         GameObject Slash_1 = Instantiate(Slash, slash_2.transform.position, slash_2.transform.rotation);
@@ -328,7 +325,7 @@ public class PlayerMove : MonoBehaviour
     }
     public void PlayFootStep()
     {
-        if (isJumping) return;
+        if (!isJumping) return;
         AudioPool.instance.Play(walkClips[UnityEngine.Random.Range(0, walkClips.Length)], 0.5f, 2f);
     }
     private void OnCollisionEnter2D(Collision2D collision)

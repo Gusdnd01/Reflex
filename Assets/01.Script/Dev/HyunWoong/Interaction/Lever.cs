@@ -27,7 +27,6 @@ public class Lever : MonoBehaviour, IInteract
         anim.SetTrigger("DoorKey");
         AudioPool.instance.Play(KeyClip, 1f, 0.5f);
         isUsed = false;
-
     }
 
     public void DoorOpen()
