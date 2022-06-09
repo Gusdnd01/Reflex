@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    [SerializeField] GameObject ptEnt;
-    [SerializeField] GameObject ptEsc;
+    #region Æ÷Å»
+    [SerializeField] protected GameObject ptEnt;
+    [SerializeField] protected GameObject ptQui;
+    #endregion
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /// <summary>
+    /// portal enter
+    /// </summary>
+    /// <param name="collision"></param>
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Obe"))
         {
@@ -15,7 +21,11 @@ public class Portal : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /// <summary>
+    /// portal quit 
+    /// </summary>
+    /// <returns></returns>
+    protected virtual void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Obe"))
         {
@@ -23,9 +33,13 @@ public class Portal : MonoBehaviour
         }
     }
 
-    IEnumerator Teleport()
+    /// <summary>
+    /// portal move
+    /// </summary>
+    /// <returns></returns>
+    protected IEnumerator Teleport()
     {
         yield return null;
-        ptEnt.transform.position = ptEsc.transform.position;
+        ptEnt.transform.position = ptQui.transform.position;
     }
 }

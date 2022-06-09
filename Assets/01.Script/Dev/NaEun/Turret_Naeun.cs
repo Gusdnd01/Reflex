@@ -7,7 +7,7 @@ public class Turret_NaEun : MonoBehaviour
     [SerializeField] protected float fireDelay;
     [SerializeField] protected GameObject bullet;
     [SerializeField] protected Transform firePosition;
-    [Range(1f, 10f)][SerializeField] protected float time = 1f;
+    [Range(1f, 10f)] [SerializeField] protected float time = 1f;
     [SerializeField] protected int maxCharge;
     protected int curCharge;
     protected Animator turretAnim;

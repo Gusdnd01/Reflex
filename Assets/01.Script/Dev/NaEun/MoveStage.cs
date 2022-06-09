@@ -10,8 +10,8 @@ public class MoveStage : MonoBehaviour, IInteract
     [SerializeField]
     private Animator anima;
 
-    [SerializeField]
-    private Transform lever;
+    /*[SerializeField]
+    private Transform lever;*/
 
     [SerializeField]
     private AudioClip doorOpenClip;
