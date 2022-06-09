@@ -236,7 +236,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     hit.transform.GetComponent<ObeHit>().Set(orbSpawner.SpawnOrb);
                     CameraManager.instance._cmObeCam.Follow = hit.transform;
-                    CameraManager.instance.SetObeCam();
+                    StartCoroutine(SetCam());
                 }
             }
         }
@@ -291,6 +291,13 @@ public class PlayerMove : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Destroy(Slash_1);
         isAttack = false;
+    }
+
+    IEnumerator SetCam()
+    {
+        CameraManager.instance.SetObeCam();
+        yield return new WaitForSeconds(5f);
+        CameraManager.instance.SetPlayerCamActive();
     }
     public void FlipHandle(bool isCancle)
     {

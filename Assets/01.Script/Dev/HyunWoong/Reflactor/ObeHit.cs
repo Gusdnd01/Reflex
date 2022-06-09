@@ -33,12 +33,16 @@ public class ObeHit : HitAbleObject
     private void OnDestroy()
     {
         if (action == null) return;
-        CameraManager.instance.SetPlayerCamActive();
         action();
     }
 
     public override void Hit_Right()
     {
         //¾È¾µµí
+    }
+
+    IEnumerator SetCam()
+    {
+        yield return new WaitForSeconds(1.5f);
     }
 }
