@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 9201057938384460176}
   - component: {fileID: 9201057938384460177}
   - component: {fileID: 9201057938384460178}
-  - component: {fileID: 4249274872278168538}
   - component: {fileID: 5359591624022400756}
+  - component: {fileID: 5513422198453072681}
   m_Layer: 0
   m_Name: PortalEnter
   m_TagString: Untagged
@@ -104,20 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4249274872278168538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201057938384460179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a930838f314f5c744ad063ec36ff8d2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ptEnt: {fileID: 9201057938384460179}
-  ptEsc: {fileID: 0}
 --- !u!70 &5359591624022400756
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +120,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0.017109632, y: 0.0031279325}
   m_Size: {x: 0.52785635, y: 0.76852584}
   m_Direction: 0
+--- !u!114 &5513422198453072681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201057938384460179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ab5902ae7a72e4c846cdc3f79a43a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ptEnt: {fileID: 0}
+  ptQui: {fileID: 0}

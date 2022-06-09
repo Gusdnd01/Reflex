@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2292891006380932702}
   - component: {fileID: 2292891006380932703}
   - component: {fileID: 2292891006380932696}
-  - component: {fileID: 421983656121158639}
   - component: {fileID: 6849094359752354914}
+  - component: {fileID: 1028689524886654576}
   m_Layer: 0
-  m_Name: PortalEscape
+  m_Name: PortalQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,20 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &421983656121158639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2292891006380932697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a930838f314f5c744ad063ec36ff8d2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ptEnt: {fileID: 0}
-  ptEsc: {fileID: 2292891006380932697}
 --- !u!70 &6849094359752354914
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +120,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01564002, y: 0.0031280518}
   m_Size: {x: 0.51828337, y: 0.7810383}
   m_Direction: 0
+--- !u!114 &1028689524886654576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292891006380932697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ab5902ae7a72e4c846cdc3f79a43a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ptEnt: {fileID: 0}
+  ptQui: {fileID: 0}

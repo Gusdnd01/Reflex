@@ -9,10 +9,6 @@ public class Portal : MonoBehaviour
     [SerializeField] protected GameObject ptQui;
     #endregion
 
-    /// <summary>
-    /// portal enter
-    /// </summary>
-    /// <param name="collision"></param>
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Obe"))
@@ -21,10 +17,6 @@ public class Portal : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// portal quit 
-    /// </summary>
-    /// <returns></returns>
     protected virtual void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Obe"))
@@ -34,7 +26,7 @@ public class Portal : MonoBehaviour
     }
 
     /// <summary>
-    /// portal move
+    /// 오브 이동 함수
     /// </summary>
     /// <returns></returns>
     protected IEnumerator Teleport()

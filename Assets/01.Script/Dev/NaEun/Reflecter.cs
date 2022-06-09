@@ -20,20 +20,26 @@ public class Reflecter : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) 
+    private void Update()
+    {
+        lastVelocity = rigid.velocity;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         print("aa");
-        var speed = lastVelocity.magnitude; 
-        var dir = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal); 
-        rigid.velocity = dir * Mathf.Max(speed, 0f); 
+        var speed = lastVelocity.magnitude;
+        var dir = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+        rigid.velocity = dir * Mathf.Max(speed, 0f);
 
-        if(collision.collider.CompareTag("Ground"))
+        if (collision.collider.CompareTag("Ground"))
         {
             ParticleSystem ps = Instantiate(tB, transform.position, Quaternion.identity) as ParticleSystem;
             ps.Play();
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Key")){
+        if (collision.gameObject.CompareTag("Key"))
+        {
             Destroy(gameObject);
         }
     }
