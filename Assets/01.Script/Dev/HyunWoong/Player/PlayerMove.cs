@@ -237,13 +237,6 @@ public class PlayerMove : MonoBehaviour
                     hit.transform.GetComponent<ObeHit>().Set(orbSpawner.SpawnOrb);
                     CameraManager.instance._cmObeCam.Follow = hit.transform;
                     CameraManager.instance.SetObeCam();
-
-                }
-                if (hit.transform.CompareTag("Obe2"))
-                {
-                    hit.transform.GetComponent<ObeHit>().Set(orbSpawner2.SpawnOrb);
-                    CameraManager.instance._cmObeCam.Follow = hit.transform;
-                    CameraManager.instance.SetObeCam();
                 }
             }
         }

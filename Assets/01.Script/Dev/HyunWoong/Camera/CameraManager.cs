@@ -102,6 +102,7 @@ public class CameraManager : MonoBehaviour
         _cmDoorOpenCam.Priority = backPriority;
         _cmOpenCam.Priority = frontPriority;
         _cmObeCam.Priority = backPriority;
+        print(_cmOpenCam.Priority);
 
         _activeCam = _cmOpenCam;
         _activePerlin = null;

@@ -25,7 +25,7 @@ public class MirrorBlock : HitAbleObject
     public void Reset()
     {
         index = 0;
-
+        attackCount = 4;
         for(int i = 0; i < image.Length; i++)
         {
             image[i].sprite = reset;

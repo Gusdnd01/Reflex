@@ -11,7 +11,7 @@ public class Start : MonoBehaviour // start 버튼을 누르면 씬이 변경 되도록 한 스
     [SerializeField] private Image image;
     [SerializeField] Transform teleportPos;
     [SerializeField] private Image panel;
-    [SerializeField] MirrorBlock mirrorBlock;
+    MirrorBlock mirrorBlock;
     [SerializeField] private Transform playerPos;
 
     private float fadeAlpha = 0f;
@@ -36,7 +36,7 @@ public class Start : MonoBehaviour // start 버튼을 누르면 씬이 변경 되도록 한 스
         panel.gameObject.SetActive(false);
         GameManager.playerTimeScale = 1f;
         Time.timeScale = 1f;
-
+        mirrorBlock.Reset();
         StartCoroutine(Fade());
     }
 
