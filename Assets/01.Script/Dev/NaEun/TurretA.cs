@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class TurretA : Turret_NaEun
 {
+    private void Awake()
+    {
+        maxCharge = 3;
+    }
+
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Obe"))

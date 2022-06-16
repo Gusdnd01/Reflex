@@ -9,17 +9,17 @@ public class Portal : MonoBehaviour
     [SerializeField] protected GameObject ptQui;
     #endregion
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Obe"))
+        if (collision.collider.CompareTag("Obe"))
         {
             ptEnt = collision.gameObject;
         }
     }
 
-    protected virtual void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.CompareTag("Obe"))
+        if (collision.collider.CompareTag("Obe"))
         {
             StartCoroutine(Teleport());
         }
