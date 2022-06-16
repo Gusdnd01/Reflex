@@ -8,8 +8,7 @@ public class FadeManager : MonoBehaviour
 {
     public static FadeManager Instance;
 
-    private RectTransform canvasTrm;
-    private RectTransform fadePanelTrm;
+    public RectTransform fadePanelTrm;
 
     private void Awake()
     {
@@ -18,12 +17,6 @@ public class FadeManager : MonoBehaviour
             Debug.LogError("Multiple Instance is running");
         }
         Instance = this;
-    }
-
-    private void Start()
-    {
-        canvasTrm = GameObject.Find("Canvas").GetComponent<RectTransform>();
-        fadePanelTrm = canvasTrm.Find("FadePanel").GetComponent<RectTransform>();
     }
 
     public void FadeIn()

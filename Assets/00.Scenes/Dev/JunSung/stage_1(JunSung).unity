@@ -1821,7 +1821,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.1
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1845,7 +1845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434127882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.95, y: -7.8699994, z: -48.852364}
+  m_LocalPosition: {x: 6.0500007, y: 0.45999992, z: -24.993227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4327,11 +4327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2417720139926065931, guid: 2d0c6cb201110d342a59a8aa8666f038, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.89
+      value: 37.1
       objectReference: {fileID: 0}
     - target: {fileID: 2417720139926065931, guid: 2d0c6cb201110d342a59a8aa8666f038, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96
+      value: -11.08
       objectReference: {fileID: 0}
     - target: {fileID: 2417720139926065931, guid: 2d0c6cb201110d342a59a8aa8666f038, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4795,6 +4795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9274c223f9ed1dc4d94e63108aa86c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadePanelTrm: {fileID: 403196518}
 --- !u!114 &1720859920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28340,7 +28341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988398029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.83107, y: -0.10853362, z: 0.9756508}
+  m_LocalPosition: {x: 6.1589317, y: -10.228534, z: 0.9756508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 141528873}
