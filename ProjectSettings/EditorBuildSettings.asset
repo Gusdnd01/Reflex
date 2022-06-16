@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.Scenes/Dev/HyunWoong/ToBeContinued.unity
     guid: 43981f88c91b9ce47b8996b09cb2461f
+  - enabled: 1
+    path: Assets/00.Scenes/Dev/JunSung/Start.unity
+    guid: fa156d94cf59e4947b74cff070f2750b
+  - enabled: 1
+    path: Assets/00.Scenes/Dev/JunSung/stage_1(JunSung).unity
+    guid: 1c3da15a9bdeaa24fbff29ff97958747
   m_configObjects: {}

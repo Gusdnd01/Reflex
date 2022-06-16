@@ -1845,7 +1845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434127882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.740687, y: 0.5590179, z: -10}
+  m_LocalPosition: {x: -2.7406874, y: 0.55901825, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4327,11 +4327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2417720139926065931, guid: 2d0c6cb201110d342a59a8aa8666f038, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.89
+      value: -4.49
       objectReference: {fileID: 0}
     - target: {fileID: 2417720139926065931, guid: 2d0c6cb201110d342a59a8aa8666f038, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 2417720139926065931, guid: 2d0c6cb201110d342a59a8aa8666f038, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4795,7 +4795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9274c223f9ed1dc4d94e63108aa86c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadePanelTrm: {fileID: 0}
+  fadePanelTrm: {fileID: 403196518}
 --- !u!114 &1720859920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28341,7 +28341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988398029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.83107, y: -0.10853362, z: 0.9756508}
+  m_LocalPosition: {x: -35.43107, y: 0.71146643, z: 0.9756508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 141528873}
