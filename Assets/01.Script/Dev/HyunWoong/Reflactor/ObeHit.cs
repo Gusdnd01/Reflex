@@ -40,9 +40,4 @@ public class ObeHit : HitAbleObject
     {
         //¾È¾µµí
     }
-
-    IEnumerator SetCam()
-    {
-        yield return new WaitForSeconds(1.5f);
-    }
 }

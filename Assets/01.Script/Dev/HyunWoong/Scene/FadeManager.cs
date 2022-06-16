@@ -10,6 +10,9 @@ public class FadeManager : MonoBehaviour
 
     public RectTransform fadePanelTrm;
 
+    [SerializeField] float sec = 1.5f;
+    [SerializeField] float sec_2 = 1.5f;
+
     private void Awake()
     {
         if(Instance != null)
@@ -26,7 +29,7 @@ public class FadeManager : MonoBehaviour
     {
         Image img = fadePanelTrm.GetComponent<Image>();
 
-        img.DOFade(1, 0.5f);
+        img.DOFade(1, sec);
     }
 
     /// <summary>
@@ -36,6 +39,6 @@ public class FadeManager : MonoBehaviour
     {
         Image img = fadePanelTrm.GetComponent<Image>();
 
-        img.DOFade(0, 0.5f);
+        img.DOFade(0, sec_2);
     }
 }
