@@ -154,6 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a321e12cd53291469683655ad926453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCount: 4
+  image: []
+  change: {fileID: 0}
+  reset: {fileID: 0}
+  index: 0
 --- !u!68 &487671831
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -616,6 +621,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a321e12cd53291469683655ad926453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCount: 4
+  image: []
+  change: {fileID: 0}
+  reset: {fileID: 0}
+  index: 0
 --- !u!68 &859840904
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1973,6 +1983,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a321e12cd53291469683655ad926453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCount: 4
+  image: []
+  change: {fileID: 0}
+  reset: {fileID: 0}
+  index: 0
 --- !u!68 &1960615744
 EdgeCollider2D:
   m_ObjectHideFlags: 0

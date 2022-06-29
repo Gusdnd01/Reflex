@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
 
     [Header("캐릭터가 행동할 수 있는것")]
     public bool isJumping;
+    private bool JumpStart = false; 
+    private bool JumpEnd = false;
     public bool isMoving = true;
     public bool isAttack = true;
     public bool isCanFlip = true;
@@ -182,13 +184,15 @@ public class PlayerMove : MonoBehaviour
         {
             anim.SetBool("PlayerMoving", true);
         }
-        else
+        else 
         {
             anim.SetBool("PlayerMoving", false);
         }
     }
     void Jump()
     {
+        
+        
         Debug.DrawRay(transform.position, Vector2.down * 0.6f, Color.green, 0.1f);
         if (isJumping)
         {
@@ -196,8 +200,10 @@ public class PlayerMove : MonoBehaviour
             if (hit)
             {
                 isJumping = false;
+                anim.SetBool("PlayerJumping", false);
             }
         }
+
         if (Input.GetKeyDown(KeyCode.W) && !isJumping && GameManager.playerTimeScale != 0)
         {
             hit = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, GroundLayerMask);
@@ -205,6 +211,7 @@ public class PlayerMove : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
                 isJumping = true;
+                anim.SetBool("PlayerJumping", true);
                 anim.SetTrigger("PlayerJump");
             }
         }
@@ -325,7 +332,7 @@ public class PlayerMove : MonoBehaviour
     }
     public void PlayFootStep()
     {
-        if (!isJumping) return;
+        if (isJumping) return;
         AudioPool.instance.Play(walkClips[UnityEngine.Random.Range(0, walkClips.Length)], 0.5f, 2f);
     }
     private void OnCollisionEnter2D(Collision2D collision)
