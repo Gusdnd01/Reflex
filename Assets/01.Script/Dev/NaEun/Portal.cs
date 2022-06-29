@@ -11,18 +11,12 @@ public class Portal : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Obe"))
-        {
             ptEnt = collision.gameObject;
-        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Obe"))
-        {
             StartCoroutine(Teleport());
-        }
     }
 
     /// <summary>
